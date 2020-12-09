@@ -2,6 +2,14 @@
 
 基于微软monaco-editor封装的react精简版。
 
+ojEditor代码编辑器，一款支持代码高亮，代码提示，并且支持多语言，定制性极高的一款插件。<br>
+
+安装插件
+
+```
+yarn add @kkb/ojeditor
+```
+
 ## OjEditor非受控组件介绍
 
 非受控组件没有onChange事件
