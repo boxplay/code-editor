@@ -20,7 +20,7 @@ import {
   EditorOptions,
 } from '../../typings/codeEditor';
 
-interface EditorCpRef {
+export interface EditorCpRef {
   setLanguage: (v: LanguageType) => void;
   setTheme: (v: CodeThemeType) => void;
   setEditorOpts: (options: EditorOptions) => void;

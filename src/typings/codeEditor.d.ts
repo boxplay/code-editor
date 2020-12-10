@@ -13,13 +13,13 @@ interface EditorBaseProps {
 }
 // 非受控
 export interface IOjEditorProps extends EditorBaseProps {
-  editorDidMount?: (editor: any) => {};
+  editorDidMount?: (editor: any) => void;
 }
 
 // 受控组件props
 export interface IOjEditorCpProps extends EditorBaseProps {
   onChange: (v: string | number | undefined) => {};
-  editorDidMount?: (editor: any) => {};
+  editorDidMount?: (editor: any) => void;
 }
 
 // 配置类型

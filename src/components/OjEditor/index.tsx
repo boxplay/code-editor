@@ -16,7 +16,7 @@ import {
   EditorOptions,
 } from '../../typings/codeEditor';
 
-interface EditorRef {
+export interface EditorRef {
   getValue: () => string;
   setValue: (v: string) => void;
   setLanguage: (v: LanguageType) => void;

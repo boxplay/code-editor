@@ -39,6 +39,8 @@ import { OjEditor, LANGUAGE_TYPE, EDITOR_THEME } from '@kkb/oj-editor';
 const DemoTest = () => {
   const editorRef = useRef();
 
+  const editorDidMount = (editor) => {}
+
   return <OjEditor
     ref={editorRef}
     className={styles.codeWrap} // 样式，控制宽高
@@ -94,28 +96,12 @@ const DemoTest = () => {
   const [value, setValue] = useState('let a = 122');
 
   return <OjEditorCp 
-    ref={editorRef} // 同上ref方法
+    ref={editorRef}
     className={styles.codeWrap} // 样式，控制宽高
     id="boxid" // 绑定id
     value={value} // 内容
     onChange={(v)=> setValue(v)} // 内容改变时触发
-    editorOptions={{
-      minimap: { enabled: false }, // 关闭地图
-      readOnly: false, // 只读
-      cursorStyle: 'line', // 光标样式 'block' or 'line'
-      fontSize: 14, // 字体大小
-      contextmenu: false, // 右键菜单
-      // 滚动条
-      scrollbar: {
-        useShadows: true, // 滚动内容时，投射水平和垂直阴影
-        verticalHasArrows: false, // 垂直滚动是否有箭头
-        horizontalHasArrows: false, // 水平滚动是否有箭头
-        vertical: 'auto', // 垂直滚动条 'auto', 'visible', 'hidden'
-        horizontal: 'auto', // 水平滚动条
-      },
-      showFoldingControls: 'mouseover', // 折叠控件 always mouseover移入
-      scrollBeyondLastLine: false, // 是否滚动底部间隔
-    }}
+    editorOptions={{}} // editor配置
     lan={LANGUAGE_TYPE.javascript} // code语言
     codeTheme={EDITOR_THEME.VisualStudioDark} // 代码主题色
     vs="https://cdn.jsdelivr.net/npm/monaco-editor@0.21.2/min/vs" // 定义cdn地址（可选参数）
