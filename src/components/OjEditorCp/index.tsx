@@ -8,6 +8,7 @@ import React, {
 import {
   ControlledEditor,
   ControlledEditorOnChange,
+  EditorDidMount,
 } from '@monaco-editor/react';
 import { initMonaco } from '../../utils';
 import { EDITOR_THEME, LANGUAGE_TYPE } from '../../consts';
@@ -34,6 +35,7 @@ const OjEditorCp = forwardRef<EditorCpRef, IOjEditorCpProps>(
       className,
       value,
       onChange,
+      editorDidMount,
       editorOptions = {},
       lan = LANGUAGE_TYPE.javascript,
       codeTheme = EDITOR_THEME.VisualStudioDark,
@@ -48,6 +50,12 @@ const OjEditorCp = forwardRef<EditorCpRef, IOjEditorCpProps>(
       ...editorInitOpts,
       ...editorOptions,
     });
+
+    // 初始化editor
+    const handleEditorDidMount: EditorDidMount = (_, editor) => {
+      editorRef.current = editor;
+      editorDidMount?.(editor);
+    };
 
     const handleEditorChange: ControlledEditorOnChange = (_ev, v) => {
       onChange?.(v);
@@ -89,6 +97,7 @@ const OjEditorCp = forwardRef<EditorCpRef, IOjEditorCpProps>(
         <ControlledEditor
           value={value}
           onChange={handleEditorChange}
+          editorDidMount={handleEditorDidMount}
           language={language}
           theme={theme}
           options={opts}

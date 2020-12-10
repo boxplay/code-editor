@@ -1,7 +1,7 @@
 {
-  "name": "@kkb/ojeditor",
+  "name": "@kkb/oj-editor",
   "version": "0.0.2",
-  "description": "ojEditor代码编辑器，一款支持代码高亮，代码提示，并且支持多语言，定制性极高的一款插件。",
+  "description": "oj-editor代码编辑器，一款支持代码高亮，代码提示，并且支持多语言，定制性极高的一款插件。",
   "publishConfig": {
     "registry": "https://registry-npm.kaikeba.com/"
   },
