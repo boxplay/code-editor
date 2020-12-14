@@ -4,26 +4,28 @@
 
 @kkb/oj-editor代码编辑器，一款支持代码高亮，代码提示，并且支持多语言，定制性极高的一款插件。<br>
 
-### 目录
-- [@kkb/oj-editor代码编辑器](#kkboj-editor代码编辑器)
-    - [目录](#目录)
-    - [安装插件](#安装插件)
-- [组件使用](#组件使用)
-  - [OjEditor非受控组件介绍](#ojeditor非受控组件介绍)
-  - [OjEditorCp受控组件介绍](#ojeditorcp受控组件介绍)
-  - [monaco原生介绍](#monaco原生介绍)
-- [props参数介绍](#props参数介绍)
+## 目录
 
-### 安装插件
+* [安装插件](#安装插件)
+* [组件使用](#组件使用)
+  + [OjEditor非受控组件介绍](#ojeditor非受控组件介绍)
+  + [OjEditorCp受控组件介绍](#ojeditorcp受控组件介绍)
+  + [monaco原生介绍](#monaco原生介绍)
+* [props参数介绍](#props参数介绍)
+
+## 安装插件
 
 终端输入：
-```
+
+``` 
+
 yarn add @kkb/oj-editor
 ```
 
 or
 
-```
+``` 
+
 npm install @kkb/oj-editor
 ```
 
@@ -33,7 +35,7 @@ npm install @kkb/oj-editor
 
 非受控组件没有onChange事件
 
-```jsx
+``` jsx
 import React, { useEffect, useRef, useState } from 'react';
 import { OjEditor, LANGUAGE_TYPE, EDITOR_THEME } from '@kkb/oj-editor';
 const DemoTest = () => {
@@ -88,7 +90,7 @@ OjEditorCp组件 可以支持antd Form组件<br>
 
 antd Form直接包裹此组件，不需要定义value及onChange二参数即可。
 
-```jsx
+``` jsx
 import React, { useEffect, useRef, useState } from 'react';
 import { OjEditorCp, LANGUAGE_TYPE, EDITOR_THEME } from '@kkb/oj-editor';
 const DemoTest = () => {
@@ -116,7 +118,7 @@ const DemoTest = () => {
 
 创建monaco-editor原生编辑器，直接参考monaco-editor官方文档即可
 
-```jsx
+``` jsx
 import React from 'react';
 import { monaco } from '@kkb/oj-editor';
 
@@ -132,11 +134,9 @@ monaco.init().then(monacoInstance => {
   
 ```
 
-
 # props参数介绍
 
 editor 受控组件、非受控组件的props参数介绍
-
 
 |      名称      |         类型          |                          默认值                          |                                                     描述                                                     |
 | :------------: | :-------------------: | :------------------------------------------------------: | :----------------------------------------------------------------------------------------------------------: |
@@ -152,4 +152,3 @@ editor 受控组件、非受控组件的props参数介绍
 |    loading     | React element、string |                        加载中...                         |                                            editor加载中显示的组件                                            |
 
 <!-- |                |                       |                                                          |                                                                                                              | -->
-
