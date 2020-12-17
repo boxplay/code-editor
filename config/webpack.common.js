@@ -83,10 +83,6 @@ const webpackConfig = {
       chunkFilename: 'css/[name].[contenthash:8].chunk.css',
     }),
   ],
-  // cache: {
-  //   type: 'filesystem',
-  //   version: 'v0.0.1',
-  // },
   node: {
     global: false,
     __filename: false,

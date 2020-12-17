@@ -38,6 +38,7 @@ const OjEditor = forwardRef<EditorRef, IOjEditorProps>(
       lan = LANGUAGE_TYPE.javascript,
       codeTheme = EDITOR_THEME.VisualStudioDark,
       vs, // 自定义monaco-editor的cdn
+      onClick,
     },
     ref,
   ) => {
@@ -88,6 +89,7 @@ const OjEditor = forwardRef<EditorRef, IOjEditorProps>(
                 height: 400,
               }
         }
+        onClick={onClick}
       >
         <MonacoEditor
           value={value}

@@ -10,6 +10,7 @@ interface EditorBaseProps {
   lan?: LanguageType | string;
   codeTheme?: CodeThemeType | string;
   vs?: string;
+  onClick?: (event: React.MouseEvent<HTMLDivElement, MouseEvent>) => void;
 }
 // 非受控
 export interface IOjEditorProps extends EditorBaseProps {

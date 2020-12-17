@@ -40,6 +40,7 @@ const OjEditorCp = forwardRef<EditorCpRef, IOjEditorCpProps>(
       lan = LANGUAGE_TYPE.javascript,
       codeTheme = EDITOR_THEME.VisualStudioDark,
       vs,
+      onClick,
     },
     ref,
   ) => {
@@ -93,6 +94,7 @@ const OjEditorCp = forwardRef<EditorCpRef, IOjEditorCpProps>(
                 height: 400,
               }
         }
+        onClick={onClick}
       >
         <ControlledEditor
           value={value}
