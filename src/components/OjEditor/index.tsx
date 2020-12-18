@@ -69,8 +69,7 @@ const OjEditor = forwardRef<EditorRef, IOjEditorProps>(
         }),
       // 格式化代码
       formatCode: () =>
-        // eslint-disable-next-line no-underscore-dangle
-        editorRef?.current?._actions?.['editor.action.formatDocument']?._run(),
+        editorRef?.current?.getAction(['editor.action.formatDocument']).run(),
     }));
 
     useEffect(() => {

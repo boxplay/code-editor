@@ -49,6 +49,9 @@ module.exports = {
     ...parserOptions,
   },
   rules: {
+    'react/jsx-uses-react': 2,
+    'import/named': 1,
+    'no-unused-vars': 1,
     'no-console': [1, { allow: ['warn', 'error'] }],
     'no-use-before-define': 0, // 禁止声明定义前使用
     'react/jsx-wrap-multilines': 0, // 多行JSX括在括号中
