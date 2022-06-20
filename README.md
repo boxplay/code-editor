@@ -1,4 +1,4 @@
-# @kkb/oj-editor 代码编辑器
+#editor 代码编辑器
 
 基于微软 monaco-editor 封装的 react 精简版。
 
